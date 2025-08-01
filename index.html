@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin & Earn</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div id="main">
+    <h1>🎡 Spin & Earn</h1>
+    <button id="loginBtn">Login with Google</button>
+    <div id="userInfo" style="display:none;">
+      <p id="welcome"></p>
+      <p>Coins: <span id="coinCount">0</span></p>
+      <div id="scratchCardContainer" style="margin: 20px auto;">
+        <canvas id="scratchCanvas" width="300" height="150" style="border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);"></canvas>
+        <div id="scratchResult" style="font-size:22px;font-weight:bold;margin-top:10px;"></div>
+        <button id="scratchBtn">Scratch Card</button>
+      </div>
+        <button id="logoutBtn" style="display:none; margin-left:10px;">Logout</button>
+        <div id="message" style="margin-top:15px; color:#d32f2f;"></div>
+        <div id="leaderboard" style="margin-top:30px; display:none;">
+          <h2>🏆 Leaderboard</h2>
+          <ul id="leaderboardList" style="list-style:none; padding:0;"></ul>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDHpvvfei0TkP6c7YlSe_RawuqwCrtW9GE",
+      authDomain: "spin2earn-6163a.firebaseapp.com",
+      projectId: "spin2earn-6163a",
+      storageBucket: "spin2earn-6163a.firebasestorage.app",
+      messagingSenderId: "803709564927",
+      appId: "1:803709564927:web:5fd9771b9dc697100819ca",
+      measurementId: "G-WG75N01RHM"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
